@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap");
+
+@import "tailwindcss";
+
+:root {
+  --navy: #032b3a;
+  --deep: #021d29;
+  --gold: #d7a847;
+  --gold-light: #f0d58a;
+
+  --blue: #152b62;
+  --purple: #7660c8;
+  --purple-light: #eeeaff;
+
+  --cream: #faf7ef;
+  --white: #ffffff;
+
+  --text: #182449;
+  --muted: #72778a;
+  --border: #e8e6ed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--text);
+  font-family: "Vazirmatn", sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--gold);
+  color: var(--deep);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 999px;
+}
+
+.container-main {
+  width: min(1180px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.section-padding {
+  padding-block: 100px;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.gold-line {
+  width: 55px;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--gold);
+}
+
+@media (max-width: 768px) {
+  .container-main {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .section-padding {
+    padding-block: 70px;
+  }
+}
